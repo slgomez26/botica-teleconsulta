@@ -19,7 +19,7 @@
         }
 
         .overlay {
-            background: rgba(255, 255, 255, 0.45);
+            background: rgba(255, 255, 255, 0.10);
             min-height: 100vh;
             padding: 20px;
             box-sizing: border-box;
@@ -47,11 +47,13 @@
             max-width: 725px;
             margin: 30px auto;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.68);
+            background: rgba(255, 255, 255, 0.30);
+            border: 1px solid rgba(255, 255, 255, 0.45);
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
             box-sizing: border-box;
-            backdrop-filter: blur(3px);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
         }
 
         h4 {
@@ -82,7 +84,7 @@
             padding: 0 10px !important;
             border: 1px solid #bdbdbd !important;
             border-radius: 5px !important;
-            background: rgba(255, 255, 255, 0.88) !important;
+            background: rgba(255, 255, 255, 0.65) !important;
             box-shadow: none !important;
         }
 
@@ -102,7 +104,7 @@
             display: none;
             margin-top: 20px;
             padding: 12px;
-            background: #e0f2f1;
+            background: rgba(224, 242, 241, 0.90);
             color: #00695c;
             border-radius: 5px;
         }
@@ -134,9 +136,10 @@
         <nav class="blue darken-2">
             <div class="nav-wrapper container">
                 <a href="panel.html" class="brand-logo">
-                    <img src="img/logo-botica.png"
-                         class="logo"
-                         alt="Logo Botica Teleconsulta">
+                    <img
+                        src="img/logo-botica.png"
+                        class="logo"
+                        alt="Logo Botica Teleconsulta">
                     <span>Botica Teleconsulta</span>
                 </a>
             </div>
