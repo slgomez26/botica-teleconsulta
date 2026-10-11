@@ -19,7 +19,7 @@
         }
 
         .overlay {
-            background: rgba(255, 255, 255, 0.72);
+            background: rgba(255, 255, 255, 0.45);
             min-height: 100vh;
             padding: 20px;
             box-sizing: border-box;
@@ -47,10 +47,11 @@
             max-width: 725px;
             margin: 30px auto;
             padding: 30px;
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.68);
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
             box-sizing: border-box;
+            backdrop-filter: blur(3px);
         }
 
         h4 {
@@ -81,7 +82,7 @@
             padding: 0 10px !important;
             border: 1px solid #bdbdbd !important;
             border-radius: 5px !important;
-            background: #ffffff !important;
+            background: rgba(255, 255, 255, 0.88) !important;
             box-shadow: none !important;
         }
 
@@ -148,37 +149,41 @@
 
                 <div class="campo">
                     <label for="nombre">Nombre del paciente</label>
-                    <input type="text"
-                           id="nombre"
-                           name="nombre"
-                           autocomplete="name"
-                           required>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        autocomplete="name"
+                        required>
                 </div>
 
                 <div class="campo">
                     <label for="documento">Documento</label>
-                    <input type="text"
-                           id="documento"
-                           name="documento"
-                           required>
+                    <input
+                        type="text"
+                        id="documento"
+                        name="documento"
+                        required>
                 </div>
 
                 <div class="campo">
                     <label for="telefono">Teléfono</label>
-                    <input type="text"
-                           id="telefono"
-                           name="telefono"
-                           autocomplete="tel"
-                           required>
+                    <input
+                        type="text"
+                        id="telefono"
+                        name="telefono"
+                        autocomplete="tel"
+                        required>
                 </div>
 
                 <div class="campo">
                     <label for="direccion">Dirección rural</label>
-                    <input type="text"
-                           id="direccion"
-                           name="direccion"
-                           autocomplete="street-address"
-                           required>
+                    <input
+                        type="text"
+                        id="direccion"
+                        name="direccion"
+                        autocomplete="street-address"
+                        required>
                 </div>
 
                 <div class="botones">
@@ -191,10 +196,12 @@
                     </a>
                 </div>
 
-                <div id="mensaje"
-                     class="mensaje"
-                     role="status"
-                     aria-live="polite"></div>
+                <div
+                    id="mensaje"
+                    class="mensaje"
+                    role="status"
+                    aria-live="polite">
+                </div>
 
             </form>
         </main>
@@ -204,6 +211,7 @@
         document
             .getElementById("formularioPaciente")
             .addEventListener("submit", function(event) {
+
                 event.preventDefault();
 
                 const mensaje = document.getElementById("mensaje");
